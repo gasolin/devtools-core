@@ -1,0 +1,52 @@
+{
+  "name": "devtools-netmonitor",
+  "version": "0.1.0",
+  "license": "MPL-2.0",
+  "description": "Devtools Netmonitor",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "node bin/dev-server.js",
+    "start-app": "TARGET=application node bin/dev-server",
+    "build": "npm run build:clean && NODE_ENV=development webpack --progress",
+    "build:clean": "rimraf dist && mkdirp dist && cp res/.htaccess dist/ && cp res/zee-worker.js dist/",
+    "build-prod": "npm run build:clean && NODE_ENV=production webpack -p --progress",
+    "build-prod-readable": "npm run build:clean && NODE_ENV=production webpack --progress",
+    "lint": "yarn run lint-js -s",
+    "lint-js": "eslint \"src/**/*.js\"",
+    "lint-fix": "yarn run lint-js -- --fix",
+    "firefox": "start-firefox --start --location https://devtools-html.github.io/debugger-examples/",
+    "chrome": "start-chrome --location https://devtools-html.github.io/debugger-examples/",
+    "copy-assets": "node bin/copy-assets --symlink",
+    "copy-assets-watch": "node bin/copy-assets --watch --symlink",
+    "prepush": "yarn run lint",
+    "nom": "rm -rf node_modules yarn.lock; yarn install"
+  },
+  "author": "",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "dependencies": {
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.22.0",
+    "babel-traverse": "^6.22.1",
+    "babel-types": "^6.22.0",
+    "babylon": "^6.15.0",
+    "codemirror": "^5.1.0",
+    "devtools-launchpad": "^0.0.56",
+    "devtools-reps": "^0.4.0",
+    "immutable": "^3.8.1",
+    "react": "=15.3.2",
+    "react-dom": "=15.3.2",
+    "react-redux": "^5.0.3",
+    "reselect": "^2.5.4"
+  },
+  "devDependencies": {
+    "devtools-launchpad": "^0.0.43",
+    "eslint": "^3.12.0",
+    "eslint-plugin-mozilla": "0.2.3",
+    "firefox-profile": "^0.4.8",
+    "fs-extra": "^2.0.0",
+    "lodash": "^4.17.4",
+    "webpack": "1.14.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "environment": "firefox-panel",
+  "baseWorkerURL": "resource://devtools/client/debugger/new/",
+  "sourceMapWorkerURL": "resource://devtools/client/debugger/new/source-map-worker.js",
+  "logging": false,
+  "clientLogging": false,
+  "firefox": {
+    "mcPath": "./firefox"
+  },
+  "features": {
+    "watchExpressions": { "enabled": true },
+    "chromeScopes": { "enabled": false },
+    "eventListeners": { "enabled": false },
+    "codeCoverage": { "enabled": false },
+    "searchModifiers": { "enabled": true },
+    "symbolSearch": { "enabled": true },
+    "editorPreview": { "enabled": true },
+    "showSource": { "enabled": true   }
+  }
+}

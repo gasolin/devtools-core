@@ -1,0 +1,37 @@
+{
+  "theme": "light",
+  "hotReloading": false,
+  "logging": {
+    "actions": false
+  },
+  "features": {
+    "watchExpressions": {
+      "label": "Watch Expressions",
+      "enabled": false
+    },
+    "chromeScopes": {
+      "label": "Chrome Scopes",
+      "enabled": false
+    },
+    "eventListeners": {
+      "label": "Event Listeners",
+      "enabled": false
+    },
+    "codeCoverage": {
+      "label": "Code Coverage",
+      "enabled": false
+    },
+    "searchModifiers": {
+      "label": "Search Modifiers",
+      "enabled": false
+    },
+    "symbolSearch": {
+      "label": "symbol Search",
+      "enabled": false
+    },
+    "editorPreview": {
+      "label": "Editor Preview",
+      "enabled": false
+    }
+  }
+}

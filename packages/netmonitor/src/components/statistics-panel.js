@@ -10,7 +10,7 @@ const {
   PropTypes,
 } = require("react");
 const { connect } = require("react-redux");
-const { Chart } = require("devtools/client/shared/widgets/Chart");
+const { Chart } = require("../shared/client/widgets/Chart");
 const { PluralForm } = require("devtools/shared/plural-form");
 const Actions = require("../actions/index");
 const { Filters } = require("../utils/filter-predicates");

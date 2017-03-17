@@ -5,7 +5,7 @@
 "use strict";
 
 const { TimelineFront } = require("devtools/shared/fronts/timeline");
-const { CurlUtils } = require("devtools/client/shared/curl");
+const { CurlUtils } = require("./shared/client/curl");
 const { ACTIVITY_TYPE, EVENTS } = require("./constants");
 const Actions = require("./actions/index");
 const {

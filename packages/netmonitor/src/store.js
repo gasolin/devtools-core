@@ -5,7 +5,7 @@
 "use strict";
 
 const { createStore, applyMiddleware } = require("redux");
-const { thunk } = require("redux/middleware/thunk");
+const { thunk } = require("redux-thunk");
 const batching = require("./middleware/batching");
 const prefs = require("./middleware/prefs");
 const rootReducer = require("./reducers/index");

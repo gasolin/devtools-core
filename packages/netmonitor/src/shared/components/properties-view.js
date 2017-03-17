@@ -19,10 +19,10 @@ const Rep = createFactory(REPS.Rep);
 const { FILTER_SEARCH_DELAY } = require("../../constants");
 
 // Components
-const Editor = createFactory(require("devtools/client/netmonitor/shared/components/editor"));
-const SearchBox = createFactory(require("devtools/client/shared/components/search-box"));
-const TreeView = createFactory(require("devtools/client/shared/components/tree/tree-view"));
-const TreeRow = createFactory(require("devtools/client/shared/components/tree/tree-row"));
+const Editor = createFactory(require("../editor"));
+const SearchBox = createFactory(require("../client/components/search-box"));
+const TreeView = createFactory(require("../client/components/tree/tree-view"));
+const TreeRow = createFactory(require("../client/components/tree/tree-row"));
 
 const { div, tr, td } = DOM;
 const AUTO_EXPAND_MAX_LEVEL = 7;

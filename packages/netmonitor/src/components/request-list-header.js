@@ -7,7 +7,7 @@
 const { createClass, PropTypes, DOM } = require("react");
 const { div, button } = DOM;
 const { connect } = require("react-redux");
-const { setNamedTimeout } = require("devtools/client/shared/widgets/view-helpers");
+const { setNamedTimeout } = require("../shared/client/widgets/view-helpers");
 const { L10N } = require("../utils/l10n");
 const { getWaterfallScale } = require("../selectors/index");
 const Actions = require("../actions/index");

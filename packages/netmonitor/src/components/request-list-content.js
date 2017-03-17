@@ -4,7 +4,7 @@
 
 "use strict";
 
-const { KeyCodes } = require("devtools/client/shared/keycodes");
+const { KeyCodes } = require("../shared/client/keycodes");
 const {
   createClass,
   createFactory,
@@ -12,7 +12,7 @@ const {
   PropTypes,
 } = require("react");
 const { connect } = require("react-redux");
-const { HTMLTooltip } = require("devtools/client/shared/widgets/tooltip/HTMLTooltip");
+const { HTMLTooltip } = require("../shared/client/widgets/tooltip/HTMLTooltip");
 const Actions = require("../actions/index");
 const {
   setTooltipImageContent,

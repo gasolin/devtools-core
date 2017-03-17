@@ -4,7 +4,7 @@
 
 "use strict";
 
-const { PrefsHelper } = require("devtools/client/shared/prefs");
+const { PrefsHelper } = require("../shared/client/prefs");
 
 /**
  * Shortcuts for accessing various network monitor preferences.

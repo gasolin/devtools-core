@@ -6,7 +6,7 @@
 
 "use strict";
 
-const {Task} = require("devtools/shared/task");
+const {Task} = require("../../../common/task");
 
 const DEFAULT_TOGGLE_DELAY = 50;
 

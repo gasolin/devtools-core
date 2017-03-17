@@ -13,7 +13,7 @@ const { getValue, isFirefoxPanel } = require("devtools-config");
 const reducers = require("./reducers");
 const selectors = require("./selectors");
 
-// const EventEmitter = require("devtools/shared/event-emitter");
+const EventEmitter = require("./shared/common/event-emitter");
 // const { createFactory } = require("devtools/client/shared/vendor/react");
 // const { render } = require("devtools/client/shared/vendor/react-dom");
 const Provider = React.createFactory(require("react-redux").Provider);

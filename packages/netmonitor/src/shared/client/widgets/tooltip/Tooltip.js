@@ -4,10 +4,10 @@
 
 "use strict";
 
-const defer = require("devtools/shared/defer");
-const EventEmitter = require("devtools/shared/event-emitter");
-const {KeyCodes} = require("devtools/client/shared/keycodes");
-const {TooltipToggle} = require("devtools/client/shared/widgets/tooltip/TooltipToggle");
+const defer = require("../../../common/defer");
+const EventEmitter = require("../../../common/event-emitter");
+const {KeyCodes} = require("../../keycodes");
+const {TooltipToggle} = require("./TooltipToggle");
 
 const XHTML_NS = "http://www.w3.org/1999/xhtml";
 const ESCAPE_KEYCODE = KeyCodes.DOM_VK_ESCAPE;

@@ -21,7 +21,7 @@ const { REPS, MODE } = require("devtools-reps");
 const Rep = createFactory(REPS.Rep);
 
 // Components
-const MDNLink = createFactory(require("./mdn-link"));
+// const MDNLink = createFactory(require("./mdn-link"));
 const PropertiesView = createFactory(require("./properties-view"));
 
 const { button, div, input, textarea } = DOM;
@@ -113,9 +113,9 @@ const HeadersPanel = createClass({
           mode: MODE.TINY,
           cropLimit: 60,
         })),
-        headerDocURL ? MDNLink({
-          url: headerDocURL,
-        }) : null
+        // headerDocURL ? MDNLink({
+        //   url: headerDocURL,
+        // }) : null
       )
     );
   },
@@ -194,9 +194,9 @@ const HeadersPanel = createClass({
             value: `${status} ${statusText}`,
             size: `${inputWidth}`,
           }),
-          statusCodeDocURL ? MDNLink({
-            url: statusCodeDocURL,
-          }) : null,
+          // statusCodeDocURL ? MDNLink({
+          //   url: statusCodeDocURL,
+          // }) : null,
           window.NetMonitorController.supportsCustomRequest && button({
             className: "devtools-button",
             onClick: cloneSelectedRequest,

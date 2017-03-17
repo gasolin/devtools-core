@@ -11,7 +11,7 @@ const {
 } = require("react");
 const { connect } = require("react-redux");
 const { Chart } = require("../shared/client/widgets/Chart");
-const { PluralForm } = require("devtools/shared/plural-form");
+const { PluralForm } = require("../shared/common/plural-form");
 const Actions = require("../actions/index");
 const { Filters } = require("../utils/filter-predicates");
 const { L10N } = require("../utils/l10n");

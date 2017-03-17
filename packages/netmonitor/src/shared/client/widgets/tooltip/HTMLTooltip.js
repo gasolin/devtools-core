@@ -6,10 +6,10 @@
 
 "use strict";
 
-const EventEmitter = require("devtools/shared/event-emitter");
+const EventEmitter = require("../../../common/event-emitter");
 const {TooltipToggle} = require("./TooltipToggle");
-const {listenOnce} = require("devtools/shared/async-utils");
-const {Task} = require("devtools/shared/task");
+const {listenOnce} = require("../../../common/async-utils");
+const {Task} = require("../../../common/task");
 
 const XUL_NS = "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
 const XHTML_NS = "http://www.w3.org/1999/xhtml";

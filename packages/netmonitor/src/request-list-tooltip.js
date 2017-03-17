@@ -7,7 +7,7 @@
 const {
   setImageTooltip,
   getImageDimensions,
-} = require("devtools/client/shared/widgets/tooltip/ImageTooltipHelper");
+} = require("./shared/client/widgets/tooltip/ImageTooltipHelper");
 const { getLongString } = require("./utils/client");
 const { WEBCONSOLE_L10N } = require("./utils/l10n");
 const { formDataURI } = require("./utils/request-utils");

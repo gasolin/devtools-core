@@ -16,7 +16,7 @@ var Netmonitor = {
       commonLibRequire: toolbox.browserRequire,
     }).require;
 
-    const EventEmitter = require("devtools/shared/event-emitter");
+    const EventEmitter = require("./shared/common/event-emitter");
     const { createFactory } = require("react");
     const { render } = require("react-dom");
     const Provider = createFactory(require("react-redux").Provider);

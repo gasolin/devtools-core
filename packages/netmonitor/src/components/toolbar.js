@@ -11,7 +11,7 @@ const {
   PropTypes,
 } = require("react");
 const { connect } = require("react-redux");
-const { PluralForm } = require("devtools/shared/plural-form");
+const { PluralForm } = require("../shared/common/plural-form");
 const Actions = require("../actions/index");
 const { L10N } = require("../utils/l10n");
 const {

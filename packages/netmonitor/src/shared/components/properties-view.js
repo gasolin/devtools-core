@@ -19,7 +19,7 @@ const Rep = createFactory(REPS.Rep);
 const { FILTER_SEARCH_DELAY } = require("../../constants");
 
 // Components
-const Editor = createFactory(require("../editor"));
+// const Editor = createFactory(require("../editor"));
 const SearchBox = createFactory(require("../client/components/search-box"));
 const TreeView = createFactory(require("../client/components/tree/tree-view"));
 const TreeRow = createFactory(require("../client/components/tree/tree-row"));
@@ -90,7 +90,7 @@ const PropertiesView = createClass({
       return (
         tr({ className: "editor-row-container" },
           td({ colSpan: 2 },
-            Editor(value)
+            // Editor(value)
           )
         )
       );

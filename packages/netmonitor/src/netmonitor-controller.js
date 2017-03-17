@@ -4,7 +4,7 @@
 
 "use strict";
 
-const { TimelineFront } = require("devtools/shared/fronts/timeline");
+// const { TimelineFront } = require("devtools/shared/fronts/timeline");
 const { CurlUtils } = require("./shared/client/curl");
 const { ACTIVITY_TYPE, EVENTS } = require("./constants");
 const Actions = require("./actions/index");
@@ -90,17 +90,17 @@ var NetMonitorController = {
         this.tabClient = this._target.activeTab;
       }
 
-      let connectTimeline = () => {
-        // Don't start up waiting for timeline markers if the server isn't
-        // recent enough to emit the markers we're interested in.
-        if (this._target.getTrait("documentLoadingMarkers")) {
-          this.timelineFront = new TimelineFront(this._target.client,
-            this._target.form);
-          return this.timelineFront.start({ withDocLoadingEvents: true });
-        }
-        return undefined;
-      };
-      await connectTimeline();
+      // let connectTimeline = () => {
+      //   // Don't start up waiting for timeline markers if the server isn't
+      //   // recent enough to emit the markers we're interested in.
+      //   if (this._target.getTrait("documentLoadingMarkers")) {
+      //     this.timelineFront = new TimelineFront(this._target.client,
+      //       this._target.form);
+      //     return this.timelineFront.start({ withDocLoadingEvents: true });
+      //   }
+      //   return undefined;
+      // };
+      // await connectTimeline();
 
       onFirefoxConnect(this._target);
       this._target.on("close", this._onTabDetached);

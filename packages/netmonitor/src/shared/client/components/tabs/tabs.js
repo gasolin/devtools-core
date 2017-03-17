@@ -7,9 +7,9 @@
 "use strict";
 
 define(function (require, exports, module) {
-  const React = require("devtools/client/shared/vendor/react");
+  const React = require("react");
   const { DOM } = React;
-  const { findDOMNode } = require("devtools/client/shared/vendor/react-dom");
+  const { findDOMNode } = require("react-dom");
 
   /**
    * Renders simple 'tab' widget.

@@ -14,6 +14,7 @@ TBD
 * disabled MDNLink (use gDevTools)
 * move devtools/client/shared to netmonitor/src/shared/client/
 * move devtools/shared/ to netmonitor/src/shared/common/
+* Bug? - use devtools-sham-modules to replace { EventEmitter, KeyShortcuts, PrefsHelper, Menu, MenuItem }
 
 ## Current yarn start logs
 
@@ -33,4 +34,5 @@ Module not found: Error: Cannot resolve module 'devtools/client/locales' in /hom
 ERROR in ./src/shared/common/l10n.js
 Module not found: Error: Cannot resolve module 'raw' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/common
  @ ./src/shared/common/l10n.js 31:18-83
+
 ```

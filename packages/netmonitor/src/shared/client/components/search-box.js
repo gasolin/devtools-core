@@ -7,7 +7,7 @@
 "use strict";
 
 const { DOM: dom, createClass, PropTypes } = require("react");
-const KeyShortcuts = require("../key-shortcuts");
+const { KeyShortcuts } = require("devtools-sham-modules");
 
 /**
  * A generic search box component for use across devtools

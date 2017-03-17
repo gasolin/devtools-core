@@ -4,8 +4,8 @@
 
 "use strict";
 
-const EventEmitter = require("../../../common/event-emitter");
-const KeyShortcuts = require("../../key-shortcuts");
+const EventEmitter = require("../../../common/");
+const { KeyShortcuts } = require("devtools-sham-modules");
 const {HTMLTooltip} = require("./HTMLTooltip");
 
 /**

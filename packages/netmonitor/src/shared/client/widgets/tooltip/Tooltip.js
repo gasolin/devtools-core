@@ -5,7 +5,7 @@
 "use strict";
 
 const defer = require("../../../common/defer");
-const EventEmitter = require("../../../common/event-emitter");
+const { EventEmitter } = require("devtools-sham-modules");
 const {KeyCodes} = require("../../keycodes");
 const {TooltipToggle} = require("./TooltipToggle");
 

@@ -1,6 +1,5 @@
 const React = require("react");
 const ReactDOM = require("react-dom");
-// const { combineReducers } = require("redux");
 
 const { getClient, firefox } = require("devtools-client-adapters");
 const {
@@ -13,9 +12,7 @@ const { getValue, isFirefoxPanel } = require("devtools-config");
 const reducers = require("./reducers");
 const selectors = require("./selectors");
 
-const EventEmitter = require("./shared/common/event-emitter");
-// const { createFactory } = require("devtools/client/shared/vendor/react");
-// const { render } = require("devtools/client/shared/vendor/react-dom");
+const { EventEmitter } = require("devtools-sham-modules");
 const Provider = React.createFactory(require("react-redux").Provider);
 
 const { configureStore } = require("./store");
@@ -31,7 +28,7 @@ this.NetMonitorController = NetMonitorController;
 const App = createFactory(require("./components/network-monitor"));
 
 // Inject EventEmitter into netmonitor window.
-// EventEmitter.decorate(window);
+EventEmitter.decorate(window);
 
 // if (!isFirefoxPanel()) {
 //   window.L10N = L10N;

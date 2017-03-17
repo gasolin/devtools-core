@@ -6,7 +6,7 @@
 
 "use strict";
 
-const EventEmitter = require("../../../common/event-emitter");
+const { EventEmitter } = require("devtools-sham-modules");
 const {TooltipToggle} = require("./TooltipToggle");
 const {listenOnce} = require("../../../common/async-utils");
 const {Task} = require("../../../common/task");

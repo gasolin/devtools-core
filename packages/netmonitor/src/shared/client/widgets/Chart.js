@@ -12,7 +12,7 @@ const NAMED_SLICE_MIN_ANGLE = TAU / 8;
 const NAMED_SLICE_TEXT_DISTANCE_RATIO = 1.9;
 const HOVERED_SLICE_TRANSLATE_DISTANCE_RATIO = 20;
 
-const EventEmitter = require("../../common/event-emitter");
+const { EventEmitter } = require("devtools-sham-modules");
 const { LocalizationHelper } = require("../../common/l10n");
 const L10N = new LocalizationHelper(NET_STRINGS_URI);
 

@@ -10,7 +10,7 @@ const { gDevTools } = require("devtools/client/framework/devtools");
 const Menu = require("devtools/client/framework/menu");
 const MenuItem = require("devtools/client/framework/menu-item");
 const clipboardHelper = require("devtools/shared/platform/clipboard");
-// const { HarExporter } = require("./har/har-exporter");
+const { HarExporter } = require("./har/har-exporter");
 const { getLongString } = require("./utils/client");
 const { L10N } = require("./utils/l10n");
 const {
@@ -328,14 +328,14 @@ RequestListContextMenu.prototype = {
    * Copy HAR from the network panel content to the clipboard.
    */
   copyAllAsHar() {
-    // return HarExporter.copy(this.getDefaultHarOptions());
+    return HarExporter.copy(this.getDefaultHarOptions());
   },
 
   /**
    * Save HAR from the network panel content to a file.
    */
   saveAllAsHar() {
-    // return HarExporter.save(this.getDefaultHarOptions());
+    return HarExporter.save(this.getDefaultHarOptions());
   },
 
   getDefaultHarOptions() {

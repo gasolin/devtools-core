@@ -25,7 +25,7 @@ const {
 
 // Components
 const RequestListItem = createFactory(require("./request-list-item"));
-const RequestListContextMenu = require("../request-list-context-menu");
+// const RequestListContextMenu = require("../request-list-context-menu");
 
 const { div } = DOM;
 
@@ -52,10 +52,13 @@ const RequestListContent = createClass({
 
   componentWillMount() {
     const { dispatch } = this.props;
-    this.contextMenu = new RequestListContextMenu({
-      cloneSelectedRequest: () => dispatch(Actions.cloneSelectedRequest()),
-      openStatistics: (open) => dispatch(Actions.openStatistics(open)),
-    });
+    this.contextMenu = {
+      open: function() {},
+    };
+    // this.contextMenu = new RequestListContextMenu({
+    //   cloneSelectedRequest: () => dispatch(Actions.cloneSelectedRequest()),
+    //   openStatistics: (open) => dispatch(Actions.openStatistics(open)),
+    // });
     this.tooltip = new HTMLTooltip(window.parent.document, { type: "arrow" });
   },
 

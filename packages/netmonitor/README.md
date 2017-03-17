@@ -10,8 +10,10 @@ TBD
 
 * move devtools/shared/ to netmonitor/src/shared/common/
 * move devtools/client/shared to netmonitor/src/shared/client/
-* disabled har-exporter in request-list-context-menu
+* disabled RequestListContextMenu in request-list-content
 
+
+## Current yarn start logs
 
 ERROR in ./src/netmonitor-controller.js
 Module not found: Error: Cannot resolve module 'devtools/shared/fronts/timeline' in /home/gasolin/devtools-core/packages/netmonitor/src
@@ -81,30 +83,6 @@ ERROR in ./src/request-list-tooltip.js
 Module not found: Error: Cannot resolve module 'devtools/client/shared/widgets/tooltip/ImageTooltipHelper' in /home/gasolin/devtools-core/packages/netmonitor/src
  @ ./src/request-list-tooltip.js 104:4-72
 
-ERROR in ./src/request-list-context-menu.js
-Module not found: Error: Cannot resolve module 'devtools/client/shared/curl' in /home/gasolin/devtools-core/packages/netmonitor/src
- @ ./src/request-list-context-menu.js 10:17-55
-
-ERROR in ./src/request-list-context-menu.js
-Module not found: Error: Cannot resolve module 'devtools/client/framework/devtools' in /home/gasolin/devtools-core/packages/netmonitor/src
- @ ./src/request-list-context-menu.js 11:22-67
-
-ERROR in ./src/request-list-context-menu.js
-Module not found: Error: Cannot resolve module 'devtools/client/framework/menu' in /home/gasolin/devtools-core/packages/netmonitor/src
- @ ./src/request-list-context-menu.js 12:13-54
-
-ERROR in ./src/request-list-context-menu.js
-Module not found: Error: Cannot resolve module 'devtools/client/framework/menu-item' in /home/gasolin/devtools-core/packages/netmonitor/src
- @ ./src/request-list-context-menu.js 13:17-63
-
-ERROR in ./src/request-list-context-menu.js
-Module not found: Error: Cannot resolve module 'devtools/shared/platform/clipboard' in /home/gasolin/devtools-core/packages/netmonitor/src
- @ ./src/request-list-context-menu.js 14:24-69
-
-ERROR in ./src/shared/components/mdn-link.js
-Module not found: Error: Cannot resolve module 'devtools/client/framework/devtools' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/components
- @ ./src/shared/components/mdn-link.js 12:22-67
-
 ERROR in ./src/shared/components/properties-view.js
 Module not found: Error: Cannot resolve module 'devtools/client/netmonitor/shared/components/editor' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/components
  @ ./src/shared/components/properties-view.js 22:29-91
@@ -120,3 +98,7 @@ Module not found: Error: Cannot resolve module 'devtools/client/shared/component
 ERROR in ./src/shared/components/properties-view.js
 Module not found: Error: Cannot resolve module 'devtools/client/shared/components/tree/tree-row' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/components
  @ ./src/shared/components/properties-view.js 25:30-88
+
+ERROR in ./src/shared/components/mdn-link.js
+Module not found: Error: Cannot resolve module 'devtools/client/framework/devtools' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/components
+ @ ./src/shared/components/mdn-link.js 12:22-67

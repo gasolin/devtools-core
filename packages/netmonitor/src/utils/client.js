@@ -6,7 +6,7 @@
 
 "use strict";
 
-const Services = require("Services");
+const { Services } = require("devtools-modules");
 const Actions = require("../actions/index");
 const { EVENTS } = require("../constants");
 

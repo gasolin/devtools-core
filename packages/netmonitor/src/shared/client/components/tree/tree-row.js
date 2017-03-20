@@ -8,8 +8,8 @@
 // Make this available to both AMD and CJS environments
 define(function (require, exports, module) {
   // ReactJS
-  const React = require("devtools/client/shared/vendor/react");
-  const ReactDOM = require("devtools/client/shared/vendor/react-dom");
+  const React = require("react");
+  const ReactDOM = require("react-dom");
 
   // Tree
   const TreeCell = React.createFactory(require("./tree-cell"));

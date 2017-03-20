@@ -37,7 +37,7 @@
 
 "use strict";
 
-const Services = require("Services");
+const { Services } = require("devtools-modules");
 
 const DEFAULT_HTTP_VERSION = "HTTP/1.1";
 

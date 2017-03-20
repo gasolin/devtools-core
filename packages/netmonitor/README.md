@@ -27,7 +27,14 @@ $ yarn start
 
 On Firefox
 
-disable `devtools.debugger.prompt-connection` from `about:config` to enable connection without prompt.
+Open `about:config`
+
+* disable `devtools.debugger.prompt-connection` to enable connection without prompt.
+* enable `devtools.debugger.remote-enabled` to allow running mozilla remote debugging protocol(rdp)
+
+Run the command in gcli
+
+`listen 6080 mozilla-rdp`
 
 
 ## Publishing to M-C
@@ -43,23 +50,8 @@ TBD
 * move devtools/shared/ to netmonitor/src/shared/common/
 * Bug? - use devtools-sham-modules to replace { EventEmitter, KeyShortcuts, PrefsHelper, Menu, MenuItem }
 
-## Current yarn start logs
+## Current webconsole log
 
 ```
-ERROR in ./~/react-dom/index.js
-Module not found: Error: Cannot resolve module 'react/lib/ReactUMDEntry/lib/ReactDOM' in /home/gasolin/devtools-core/packages/netmonitor/node_modules/react-dom
- @ ./~/react-dom/index.js 3:17-46
-
-ERROR in ./src/shared/common/l10n.js
-Module not found: Error: Cannot resolve module 'devtools/shared/locales' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/common
- @ ./src/shared/common/l10n.js 29:18-91
-
-ERROR in ./src/shared/common/l10n.js
-Module not found: Error: Cannot resolve module 'devtools/client/locales' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/common
- @ ./src/shared/common/l10n.js 30:18-91
-
-ERROR in ./src/shared/common/l10n.js
-Module not found: Error: Cannot resolve module 'raw' in /home/gasolin/devtools-core/packages/netmonitor/src/shared/common
- @ ./src/shared/common/l10n.js 31:18-83
-
+TypeError: LocalizationHelper is not a constructor
 ```

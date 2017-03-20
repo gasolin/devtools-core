@@ -12,42 +12,6 @@
     "actions": false
   },
   "features": {
-    "watchExpressions": {
-      "label": "Watch Expressions",
-      "enabled": true
-    },
-    "chromeScopes": {
-      "label": "Chrome Scopes",
-      "enabled": false
-    },
-    "eventListeners": {
-      "label": "Event Listeners",
-      "enabled": false
-    },
-    "codeCoverage": {
-      "label": "Code Coverage",
-      "enabled": false
-    },
-    "searchModifiers": {
-      "label": "Search Modifiers",
-      "enabled": true
-    },
-    "symbolSearch": {
-      "label": "Symbol Search",
-      "enabled": false
-    },
-    "functionSearch": {
-      "label": "function Search",
-      "enabled": true
-    },
-    "editorPreview": {
-      "label": "Editor Preview",
-      "enabled": true
-    },
-    "previewMemberExpressions": {
-      "label": "Editor member expression Preview",
-      "enabled": true
-    }
   },
   "chrome": {
     "debug": true,

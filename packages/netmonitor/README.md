@@ -3,6 +3,33 @@ Network monitor for developers.
 
 **WARNING:** This is a prove of concept version, far from the production.
 
+## Run on browser tab
+
+You need `npm` and `yarn` installed before debugging the netmonitor.html
+
+```
+$ npm install -g yarn
+```
+
+Then clone the repo
+
+```
+$ git clone https://github.com/gasolin/devtools-core.git
+```
+
+Go to packages/netmonitor and run it on browser tab
+
+```
+$ cd packages/netmonitor
+$ yarn install
+$ yarn start
+```
+
+On Firefox
+
+disable `devtools.debugger.prompt-connection` from `about:config` to enable connection without prompt.
+
+
 ## Publishing to M-C
 TBD
 

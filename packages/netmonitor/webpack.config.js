@@ -16,7 +16,7 @@ function getEntry(filename) {
 
 const webpackConfig = {
   entry: {
-    netmonitor: getEntry('main.js')
+    netmonitor: getEntry("main.js")
   },
 
   output: {
@@ -24,6 +24,19 @@ const webpackConfig = {
     filename: "[name].js",
     publicPath: "/assets/build",
     libraryTarget: "umd"
+  },
+
+  module: {
+    loaders: [
+      {
+        test: /\.properties$/,
+        loader: require.resolve("./loaders/l10n-properties-loader"),
+      },
+      {
+        test: /\.(png|svg)$/,
+        loader: "file-loader",
+      }
+    ]
   },
 
   resolve: {
@@ -48,8 +61,12 @@ function buildConfig(envConfig) {
   mappings.forEach(([regex, res]) => {
     webpackConfig.plugins.push(
       new NormalModuleReplacementPlugin(regex, res)
-    )
+    );
   });
+
+  // Remove loaders from devtools-launchpad webpack config
+  webpackConfig.module.loaders = webpackConfig.module.loaders
+    .filter((loader) => !["svg-inline"].includes(loader.loader));
 
   return toolbox.toolboxConfig(webpackConfig, envConfig);
 }

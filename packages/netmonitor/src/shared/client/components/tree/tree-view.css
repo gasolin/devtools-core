@@ -3,7 +3,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-@import url('resource://devtools/client/shared/components/reps/reps.css');
+/*@import url('resource://devtools/client/shared/components/reps/reps.css');*/
 
 /******************************************************************************/
 /* TreeView Colors */
@@ -152,11 +152,13 @@
 }
 
 .treeTable .treeHeaderSorted > .treeHeaderCellBox {
-  background: url(chrome://devtools/skin/images/firebug/arrow-down.svg) no-repeat calc(100% - 4px);
+  /*background: url(chrome://devtools/skin/images/firebug/arrow-down.svg) no-repeat calc(100% - 4px);*/
+  background: url("../../../../../assets/images/firebug/arrow-down.svg") no-repeat calc(100% - 4px);
 }
 
 .treeTable .treeHeaderSorted.sortedAscending > .treeHeaderCellBox {
-  background-image: url(chrome://devtools/skin/images/firebug/arrow-up.svg);
+  /*background-image: url(chrome://devtools/skin/images/firebug/arrow-up.svg);*/
+  background-image: url("../../../../../assets/images/firebug/arrow-up.svg");
 }
 
 .treeTable .treeHeaderCell:hover:active {

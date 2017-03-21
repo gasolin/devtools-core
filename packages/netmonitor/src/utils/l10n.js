@@ -1,13 +1,46 @@
-/* This Source Code Form is subject to the terms of the Mozilla Public
- * License, v. 2.0. If a copy of the MPL was not distributed with this
- * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+const { sprintf } = require("devtools-modules");
 
-"use strict";
+let strings = {};
 
-const { LocalizationHelper } = require("../shared/common/l10n");
+class L10N {
+  getStr(key) {
+    if (!strings[key]) {
+      throw new Error(`L10N key ${key} cannot be found.`);
+    }
+    return strings[key];
+  }
 
-const NET_STRINGS_URI = "../shared/locales/netmonitor.properties";
-const WEBCONSOLE_STRINGS_URI = "../shared/locales/webconsole.properties";
+  getFormatStr(name, ...args) {
+    return sprintf(this.getStr(name), ...args);
+  }
 
-exports.L10N = new LocalizationHelper(NET_STRINGS_URI);
-exports.WEBCONSOLE_L10N = new LocalizationHelper(WEBCONSOLE_STRINGS_URI);
+  numberWithDecimals(number, decimals = 0) {
+    // If this is an integer, don't do anything special.
+    if (number === (number|0)) {
+      return number;
+    }
+    // If this isn't a number (and yes, `isNaN(null)` is false), return zero.
+    if (isNaN(number) || number === null) {
+      return "0";
+    }
+
+    let localized = number.toLocaleString();
+
+    // If no grouping or decimal separators are available, bail out, because
+    // padding with zeros at the end of the string won't make sense anymore.
+    if (!localized.match(/[^\d]/)) {
+      return localized;
+    }
+
+    return number.toLocaleString(undefined, {
+      maximumFractionDigits: decimals,
+      minimumFractionDigits: decimals
+    });
+  }
+
+  setBundle(bundle) {
+    strings = Object.assign(strings, bundle);
+  }
+};
+
+module.exports = { L10N: new L10N() };

@@ -13,8 +13,9 @@ const NAMED_SLICE_TEXT_DISTANCE_RATIO = 1.9;
 const HOVERED_SLICE_TRANSLATE_DISTANCE_RATIO = 20;
 
 const { EventEmitter } = require("devtools-sham-modules");
-const { LocalizationHelper } = require("../../common/l10n");
-const L10N = new LocalizationHelper(NET_STRINGS_URI);
+// const { LocalizationHelper } = require("../../common/l10n");
+// const L10N = new LocalizationHelper(NET_STRINGS_URI);
+const { L10N } = require("../../../utils/l10n");
 
 /**
  * A factory for creating charts.

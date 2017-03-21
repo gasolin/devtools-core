@@ -35,12 +35,12 @@ var NetMonitorController = {
    * @return object
    *         A promise that is resolved when the monitor finishes startup.
    */
-  startupNetMonitor() {
+  startupNetMonitor(connection) {
     if (this._startup) {
       return this._startup;
     }
     this._startup = new Promise(async (resolve) => {
-      await this.connect();
+      await this.connect(connection);
       resolve();
     });
     return this._startup;
@@ -77,7 +77,7 @@ var NetMonitorController = {
    * @return object
    *         A promise that is resolved when the monitor finishes connecting.
    */
-  connect() {
+  connect(connection) {
     if (this._connection) {
       return this._connection;
     }
@@ -86,9 +86,12 @@ var NetMonitorController = {
     this._connection = new Promise(async (resolve) => {
       // Some actors like AddonActor or RootActor for chrome debugging
       // aren't actual tabs.
-      if (this._target.isTabActor) {
-        this.tabClient = this._target.activeTab;
-      }
+      // if (this._target.isTabActor) {
+      //   this.tabClient = this._target.activeTab;
+      // }
+      this.tabTarget = connection.client.getTabTarget();
+      this._target = this.tabTarget;
+      this.tabClient = this.tabTarget.isTabActor ? this.tabTarget.activeTab : null;
 
       // let connectTimeline = () => {
       //   // Don't start up waiting for timeline markers if the server isn't
@@ -137,10 +140,10 @@ var NetMonitorController = {
 
       // The timeline front wasn't initialized and started if the server wasn't
       // recent enough to emit the markers we were interested in.
-      if (this._target.getTrait("documentLoadingMarkers")) {
-        await this.timelineFront.destroy();
-        this.timelineFront = null;
-      }
+      // if (this._target.getTrait("documentLoadingMarkers")) {
+      //   await this.timelineFront.destroy();
+      //   this.timelineFront = null;
+      // }
 
       resolve();
       this._connected = false;

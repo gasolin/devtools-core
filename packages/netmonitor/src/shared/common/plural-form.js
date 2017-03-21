@@ -39,8 +39,12 @@
  * Note: Basically, makeGetter returns 2 functions that do "get" and "numForm"
  */
 
-const {LocalizationHelper} = require("./l10n");
-const L10N = new LocalizationHelper("toolkit/locales/intl.properties");
+// const {LocalizationHelper} = require("./l10n");
+// const L10N = new LocalizationHelper("toolkit/locales/intl.properties");
+
+const { L10N } = require("../../utils/l10n");
+
+L10N.setBundle(require("../../locales/intl.properties"));
 
 // These are the available plural functions that give the appropriate index
 // based on the plural rule number specified. The first element is the number
@@ -100,12 +104,12 @@ this.PluralForm = {
     // See: http://developer.mozilla.org/en/docs/Localization_and_Plurals
 
     // Delete the getters to be overwritten
-    delete PluralForm.numForms;
-    delete PluralForm.get;
+    delete this.numForms;
+    delete this.get;
 
     // Make the plural form get function and set it as the default get
-    [PluralForm.get, PluralForm.numForms] = PluralForm.makeGetter(PluralForm.ruleNum);
-    return PluralForm.get;
+    [this.get, this.numForms] = this.makeGetter(this.ruleNum);
+    return this.get;
   },
 
   /**
@@ -159,8 +163,8 @@ this.PluralForm = {
   get numForms()
   {
     // We lazily load numForms, so trigger the init logic with get()
-    PluralForm.get();
-    return PluralForm.numForms;
+    this.get();
+    return this.numForms;
   },
 
   /**

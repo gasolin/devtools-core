@@ -5,11 +5,11 @@
 "use strict";
 
 const { createStore, applyMiddleware } = require("redux");
-const { thunk } = require("redux-thunk");
+const thunk = require("redux-thunk").default;
+const { Prefs } = require("./utils/prefs");
 const batching = require("./middleware/batching");
 const prefs = require("./middleware/prefs");
 const rootReducer = require("./reducers/index");
-const { Prefs } = require("./utils/prefs");
 const { FilterTypes, Filters } = require("./reducers/filters");
 const { Requests } = require("./reducers/requests");
 const { Sort } = require("./reducers/sort");

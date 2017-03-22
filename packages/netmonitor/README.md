@@ -42,6 +42,7 @@ TBD
 
 ## Temporary hacks (NEED FIX)
 
+* pass connection into NetmonitorController to get tabTarget
 * disabled RequestListContextMenu in request-list-content
 * disabled connectTimeline in netmonitor-controller
 * disabled Editor in properties-view
@@ -49,9 +50,3 @@ TBD
 * move devtools/client/shared to netmonitor/src/shared/client/
 * move devtools/shared/ to netmonitor/src/shared/common/
 * Bug? - use devtools-sham-modules to replace { EventEmitter, KeyShortcuts, PrefsHelper, Menu, MenuItem }
-
-## Current webconsole log
-
-```
-TypeError: LocalizationHelper is not a constructor
-```

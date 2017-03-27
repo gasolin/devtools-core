@@ -18,6 +18,15 @@ let webpackConfig = {
     netmonitor: getEntry("main.js")
   },
 
+  module: {
+    loaders: [
+      {
+        test: /\.(png|svg)$/,
+        loader: "file-loader?name=[name].[ext]",
+      }
+    ]
+  },
+
   output: {
     path: path.join(__dirname, "assets/build"),
     filename: "[name].js",
@@ -25,22 +34,10 @@ let webpackConfig = {
     libraryTarget: "umd"
   },
 
-  module: {
-    loaders: [
-      {
-        test: /\.properties$/,
-        loader: require.resolve("./loaders/l10n-properties-loader"),
-      },
-      {
-        test: /\.(png|svg)$/,
-        loader: "file-loader",
-      }
-    ]
-  },
-
   resolve: {
+    fallback: path.join(__dirname, "node_modules"),
     alias: {
-      "react-dom": "react-dom/dist/react-dom"
+      "react": path.join(__dirname, 'node_modules/react'),
     }
   }
 };

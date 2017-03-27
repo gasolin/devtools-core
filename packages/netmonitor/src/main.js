@@ -9,8 +9,8 @@ L10N.setBundle(require("./locales/netmonitor.properties"));
 L10N.setBundle(require("./locales/webconsole.properties"));
 
 require("devtools-modules/client/shared/components/splitter/SplitBox.css");
-require("devtools-modules/client/shared/components/tabs/tabbar.css");
-require("devtools-modules/client/shared/components/tabs/tabs.css");
+require("devtools-sham-modules/client/shared/components/tabs/tabbar.css");
+require("devtools-sham-modules/client/shared/components/tabs/tabs.css");
 require("devtools-modules/client/shared/components/tree/tree-view.css");
 require("./styles/netmonitor.css");
 

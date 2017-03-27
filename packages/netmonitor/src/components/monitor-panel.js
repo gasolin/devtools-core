@@ -19,7 +19,7 @@ const { getFormDataSections } = require("../utils/request-utils");
 const { getSelectedRequest } = require("../selectors/index");
 
 // Components
-const SplitBox = createFactory(require("../shared/client/components/splitter/split-box"));
+const SplitBox = createFactory(require("devtools-modules").SplitBox);
 const NetworkDetailsPanel = createFactory(require("../shared/components/network-details-panel"));
 const RequestList = createFactory(require("./request-list"));
 const Toolbar = createFactory(require("./toolbar"));

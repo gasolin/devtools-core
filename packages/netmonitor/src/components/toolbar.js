@@ -26,7 +26,7 @@ const {
 const { FILTER_SEARCH_DELAY } = require("../constants");
 
 // Components
-const SearchBox = createFactory(require("../shared/client/components/search-box"));
+const SearchBox = createFactory(require("devtools-sham-modules").SearchBox);
 
 const { button, div, span } = DOM;
 

@@ -15,8 +15,8 @@ const { L10N } = require("../../utils/l10n");
 const { getSelectedRequest } = require("../../selectors/index");
 
 // Components
-const Tabbar = createFactory(require("../client/components/tabs/tabbar"));
-const TabPanel = createFactory(require("../client/components/tabs/tabs").TabPanel);
+const Tabbar = createFactory(require("devtools-modules").Tabbar);
+const TabPanel = createFactory(require("devtools-modules").TabPanel);
 const CookiesPanel = createFactory(require("./cookies-panel"));
 const HeadersPanel = createFactory(require("./headers-panel"));
 const ParamsPanel = createFactory(require("./params-panel"));

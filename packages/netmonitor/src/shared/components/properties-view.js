@@ -20,9 +20,9 @@ const { FILTER_SEARCH_DELAY } = require("../../constants");
 
 // Components
 // const Editor = createFactory(require("../editor"));
-const SearchBox = createFactory(require("../client/components/search-box"));
-const TreeView = createFactory(require("../client/components/tree/tree-view"));
-const TreeRow = createFactory(require("../client/components/tree/tree-row"));
+const SearchBox = createFactory(require("devtools-sham-modules").SearchBox);
+const TreeView = createFactory(require("devtools-modules").TreeView);
+const TreeRow = createFactory(require("devtools-modules").TreeRow);
 
 const { div, tr, td } = DOM;
 const AUTO_EXPAND_MAX_LEVEL = 7;

@@ -25,7 +25,17 @@ $ yarn install
 $ yarn start
 ```
 
-On Firefox
+Open firefox with the command
+
+```
+firefox http://localhost:8000 --start-debugger-server 6080
+```
+
+Open `localhost:8000` to see all tabs.
+
+
+
+Or, you can manually config firefox as well.
 
 Open `about:config`
 
@@ -36,6 +46,7 @@ Run the command in gcli
 
 `listen 6080 mozilla-rdp`
 
+Then Open `localhost:8000` to see all tabs.
 
 ## Publishing to M-C
 TBD
@@ -47,6 +58,7 @@ TBD
 * disabled connectTimeline in netmonitor-controller
 * disabled Editor in properties-view
 * disabled MDNLink (use gDevTools)
-* move devtools/client/shared to netmonitor/src/shared/client/
+* ~~move devtools/client/shared to netmonitor/src/shared/client/~~
+  * components are moved to devtools-modules and devtools-shame-modules
 * move devtools/shared/ to netmonitor/src/shared/common/
 * Bug? - use devtools-sham-modules to replace { EventEmitter, KeyShortcuts, PrefsHelper, Menu, MenuItem }

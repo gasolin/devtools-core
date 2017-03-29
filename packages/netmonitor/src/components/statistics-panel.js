@@ -11,7 +11,7 @@ const {
 } = require("react");
 const { connect } = require("react-redux");
 const { Chart } = require("devtools-sham-modules");
-const { PluralForm } = require("devtools-modules");
+const { PluralForm } = require("devtools-launchpad");
 const Actions = require("../actions/index");
 const { Filters } = require("../utils/filter-predicates");
 const { L10N } = require("../utils/l10n");

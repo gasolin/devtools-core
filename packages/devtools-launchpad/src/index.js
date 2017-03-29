@@ -6,8 +6,9 @@ const { Provider } = require("react-redux");
 const { DevToolsUtils, AppConstants } = require("devtools-sham-modules");
 const { debugGlobal } = require("./utils/debug");
 const { setConfig, getValue, isDevelopment } = require("devtools-config");
-const L10N = require("./utils/L10N");
 const defer = require("./utils/defer");
+const L10N = require("./utils/L10N");
+const { PluralForm } = require("./utils/plural-form");
 const { showMenu, buildMenu } = require("./menu");
 
 setConfig(DebuggerConfig);
@@ -177,13 +178,14 @@ async function bootstrap(React, ReactDOM, App, appActions, appStore) {
 
 module.exports = {
   bootstrap,
-  renderRoot,
-  unmountRoot,
-  debugGlobal,
-  L10N,
-  defer,
-  showMenu,
   buildMenu,
+  debugGlobal,
+  defer,
+  renderRoot,
+  L10N,
+  showMenu,
+  PluralForm,
   updateTheme,
-  updateDir
+  updateDir,
+  unmountRoot,
 };

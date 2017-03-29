@@ -4,7 +4,7 @@
 
 "use strict";
 
-const { KeyCodes } = require("../shared/client/keycodes");
+const { KeyCodes } = require("devtools-sham-modules");
 const {
   createClass,
   createFactory,
@@ -12,7 +12,7 @@ const {
   PropTypes,
 } = require("react");
 const { connect } = require("react-redux");
-const { HTMLTooltip } = require("../shared/client/widgets/tooltip/HTMLTooltip");
+const { HTMLTooltip } = require("devtools-sham-modules");
 const Actions = require("../actions/index");
 const {
   setTooltipImageContent,
